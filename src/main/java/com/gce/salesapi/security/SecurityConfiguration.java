@@ -25,10 +25,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.httpBasic().and().authorizeRequests()
-                .antMatchers(HttpMethod.POST, "/items").hasRole("ADMIN")
-                .antMatchers(HttpMethod.DELETE, "/items").hasRole("ADMIN")
-                .antMatchers(HttpMethod.PUT, "/items").hasRole("ADMIN")
-                .antMatchers(HttpMethod.PATCH, "/items").hasRole("ADMIN")
+                .antMatchers(HttpMethod.DELETE, "/items/**").hasRole("ADMIN")
+                .antMatchers(HttpMethod.POST, "/items").permitAll()
+                .antMatchers(HttpMethod.PUT, "/items").permitAll()
+                .antMatchers(HttpMethod.PATCH, "/items").permitAll()
                 .antMatchers(HttpMethod.GET, "/sales/**").permitAll()
                 .antMatchers(HttpMethod.POST,"/items/addComments").permitAll()
                 .and().csrf().disable();

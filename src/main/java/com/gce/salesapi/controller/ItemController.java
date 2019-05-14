@@ -21,14 +21,13 @@ public class ItemController {
         this.commentToItemSevice = commentToItemSevice;
     }
 
-    @PostMapping("/addComments")
-    public ResponseEntity<PersistentEntityResource> addCommentsToItem(@RequestParam("id") String id,
+    @PostMapping("/{id}/addComments")
+    public ResponseEntity<PersistentEntityResource> addCommentsToItem(@PathVariable("id") String id,
                                                                       @RequestBody List<String> comments,
                                                                       PersistentEntityResourceAssembler assembler) {
         Item item = commentToItemSevice.addCommentsToItem(id, comments);
         return ResponseEntity.ok(assembler.toResource(item));
     }
-
 }
 
 

@@ -8,19 +8,19 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.hateoas.ResourceSupport;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Setter
 @Getter
+@Setter
 @JsonPropertyOrder({"resourceId"})
 @NoArgsConstructor
 @Document(collection = "items")
 public class Item {
 
     @Id
-    @JsonIgnore
     private String id;
     private String title;
     private String description;

@@ -5,6 +5,7 @@ import com.gce.salesapi.model.Location;
 import com.gce.salesapi.repository.ItemRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
