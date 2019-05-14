@@ -11,7 +11,7 @@
 
 Note: There's already added couple Items to begin with.
 
-1. To create an item:
+**1. To create an item:**
 
 - URI-http://localhost:8082/sales/items
 - Request Metthod-POST
@@ -37,7 +37,7 @@ Note: There's already added couple Items to begin with.
 			}
 ```				
 
-2. Update an item:
+**2. Update an item:**
 
 - URI-http://localhost:8082/sales/items/5cd567afe329ed7ec4b8a43e
 - Request Metthod-PUT
@@ -65,7 +65,7 @@ Note: There's already added couple Items to begin with.
 }
 ```	
 
-3. Partialy update an item:
+**3. Partialy update an item:**
 
 - URI-http://localhost:8082/sales/items/5cd567afe329ed7ec4b8a43e
 - Request Metthod-PATCH
@@ -77,38 +77,38 @@ Note: There's already added couple Items to begin with.
 }
 ```	
 
-4. Get list of items:
+**4. Get list of items:**
 
 - URI-http://localhost:8082/sales/items
 - Request Metthod-GET
 
-5. Get a single item by id:
+**5. Get a single item by id:**
 
 - URI-http://localhost:8082/sales/items/5cd567afe329ed7ec4b8a43e
 - Request Metthod-GET
 
-6. Delete an item can authorized user (Basic Auth, username: admin, password: admin):
+**6. Delete an item can authorized user (Basic Auth, username: admin, password: admin):**
 
 - URI-http://localhost:8082/sales/items/5cd567afe329ed7ec4b8a43e
 - Request Metthod-DELETE
 - Basic Auth
 
-7. Search items by title:
+**7. Search items by title:**
 
 - URI-http://localhost:8082/sales/items/search/findItemByTitle?title=AddidasShoes
 - Request Metthod-GET
 
-8. Search item by price range:
+**8. Search item by price range:**
 
 - URI-http://localhost:8082/sales/items/search/findItemsByPriceBetween?from=40&to=55
 - Request Metthod-GET
 
-9. To sort items:
+**9. To sort items:**
 
 - URI-http://localhost:8082/sales/items?sort=title,desc
 - Request Metthod-GET
 
-10. Add comment list for an item:
+**10. Add comment list for an item:**
 
 - URI-http://localhost:8082/sales/items/5cd567afe329ed7ec4b8a43e/addComments
 - Request Metthod-POST
